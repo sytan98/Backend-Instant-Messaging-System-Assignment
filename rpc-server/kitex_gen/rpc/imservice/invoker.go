@@ -3,8 +3,8 @@
 package imservice
 
 import (
-	rpc "github.com/TikTokTechImmersion/assignment_demo_2023/rpc-server/kitex_gen/rpc"
 	server "github.com/cloudwego/kitex/server"
+	rpc "github.com/sytan98/Backend-Instant-Messaging-System-Assignment/rpc-server/kitex_gen/rpc"
 )
 
 // NewInvoker creates a server.Invoker with the given handler and options.

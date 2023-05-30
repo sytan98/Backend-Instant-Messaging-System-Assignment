@@ -4,9 +4,9 @@ package imservice
 
 import (
 	"context"
-	rpc "github.com/TikTokTechImmersion/assignment_demo_2023/http-server/kitex_gen/rpc"
 	client "github.com/cloudwego/kitex/client"
 	kitex "github.com/cloudwego/kitex/pkg/serviceinfo"
+	rpc "github.com/sytan98/Backend-Instant-Messaging-System-Assignment/http-server/kitex_gen/rpc"
 )
 
 func serviceInfo() *kitex.ServiceInfo {

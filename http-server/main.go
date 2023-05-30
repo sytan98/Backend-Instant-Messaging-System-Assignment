@@ -5,15 +5,15 @@ import (
 	"log"
 	"time"
 
-	"github.com/TikTokTechImmersion/assignment_demo_2023/http-server/kitex_gen/rpc"
-	"github.com/TikTokTechImmersion/assignment_demo_2023/http-server/kitex_gen/rpc/imservice"
-	"github.com/TikTokTechImmersion/assignment_demo_2023/http-server/proto_gen/api"
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/app/server"
 	"github.com/cloudwego/hertz/pkg/common/utils"
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
 	"github.com/cloudwego/kitex/client"
 	etcd "github.com/kitex-contrib/registry-etcd"
+	"github.com/sytan98/Backend-Instant-Messaging-System-Assignment/http-server/kitex_gen/rpc"
+	"github.com/sytan98/Backend-Instant-Messaging-System-Assignment/http-server/kitex_gen/rpc/imservice"
+	"github.com/sytan98/Backend-Instant-Messaging-System-Assignment/http-server/proto_gen/api"
 )
 
 var cli imservice.Client
@@ -50,9 +50,10 @@ func sendMessage(ctx context.Context, c *app.RequestContext) {
 	}
 	resp, err := cli.Send(ctx, &rpc.SendRequest{
 		Message: &rpc.Message{
-			Chat:   req.Chat,
-			Text:   req.Text,
-			Sender: req.Sender,
+			Chat:     req.Chat,
+			Text:     req.Text,
+			Sender:   req.Sender,
+			SendTime: time.Now().UnixMicro(),
 		},
 	})
 	if err != nil {

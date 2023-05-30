@@ -2,8 +2,8 @@
 package imservice
 
 import (
-	rpc "github.com/TikTokTechImmersion/assignment_demo_2023/http-server/kitex_gen/rpc"
 	server "github.com/cloudwego/kitex/server"
+	rpc "github.com/sytan98/Backend-Instant-Messaging-System-Assignment/http-server/kitex_gen/rpc"
 )
 
 // NewServer creates a server.Server with the given handler and options.

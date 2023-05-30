@@ -5,8 +5,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/TikTokTechImmersion/assignment_demo_2023/rpc-server/kitex_gen/rpc"
 	"github.com/stretchr/testify/assert"
+	"github.com/sytan98/Backend-Instant-Messaging-System-Assignment/rpc-server/kitex_gen/rpc"
 )
 
 func TestIMServiceImpl_Send(t *testing.T) {
