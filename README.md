@@ -6,7 +6,7 @@ This simple backend IM API is built on the demo and template provided from the 2
 
 ![plot](/architecture.png)
 
-The default interface of the RPC server was used and sendtime used is the unix timestamp when message is received on the HTTP server.
+The default interface of the RPC server was used and sendtime is set to the unix timestamp when message is received on the HTTP server.
 
 Unit testing for the rpc-server was done together with miniredis to mock the Redis DB.
 
